@@ -1,9 +1,10 @@
 package ru.yandex.practicum.pojo;
 
+
 public class CourierNoLogin {
     private final String password;
 
-    public CourierNoLogin(String password) {
+    private CourierNoLogin(String password) {
         this.password = password;
     }
 

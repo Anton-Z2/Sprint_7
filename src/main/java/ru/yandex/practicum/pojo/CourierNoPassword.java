@@ -3,7 +3,7 @@ package ru.yandex.practicum.pojo;
 public class CourierNoPassword {
     private final String login;
 
-    public CourierNoPassword(String login) {
+    private CourierNoPassword(String login) {
         this.login = login;
     }
 

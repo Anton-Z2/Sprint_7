@@ -4,7 +4,7 @@ public class AccountDataNoLogin {
 
     private final String password;
 
-    public AccountDataNoLogin(String password) {
+    private AccountDataNoLogin(String password) {
         this.password = password;
     }
 

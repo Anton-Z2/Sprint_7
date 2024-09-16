@@ -1,5 +1,6 @@
 package ru.yandex.practicum;
 
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,8 +23,6 @@ public class OrderCreateTest {
     private String deliveryDate;
     private String comment;
     private String[] color;
-
-    private Integer trackId;
 
     public OrderCreateTest(String firstName, String lastName, String address, String metroStation, String phone, Integer rentTime, String deliveryDate, String comment, String[] color) {
         this.firstName = firstName;
@@ -48,6 +47,7 @@ public class OrderCreateTest {
     }
 
     @Test
+    @DisplayName("Параметризованный тест создания заказов")
     public void createOrderTest() {
         Order order = new Order(firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment, color);
         OrderClient orderClient = new OrderClient();
